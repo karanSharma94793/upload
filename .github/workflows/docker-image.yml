@@ -30,7 +30,7 @@ jobs:
         username: ubuntu
         key: ${{ secrets.AWS_SSH_PRIVATE_KEY }}
         script: |
-          docker pull ks4556737540/upload:latest
-          docker stop app || true
-          docker rm app || true
-          docker run -d --name app -p 80:3000 ks4556737540/upload:latest
+          sudo docker pull ks4556737540/upload:latest
+          sudo docker stop app || true
+          sudo docker rm app || true
+          sudo docker run -d --name app -p 80:3000 ks4556737540/upload:latest
